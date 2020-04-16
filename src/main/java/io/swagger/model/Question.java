@@ -1,5 +1,6 @@
 package io.swagger.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -9,6 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,13 +22,16 @@ import javax.validation.constraints.*;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-04-16T09:21:50.059Z[GMT]")
-public class Question   {
+@Entity
+public class Question implements Serializable {
   @JsonProperty("id")
+  @Id
   private Long id = null;
 
   @JsonProperty("tags")
   @Valid
-  private List<String> tags = null;
+  @ElementCollection
+  private List<String> tags = new ArrayList<>();
 
   @JsonProperty("is_answered")
   private Boolean isAnswered = false;
