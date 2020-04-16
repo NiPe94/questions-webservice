@@ -1,28 +1,28 @@
 package io.swagger.model;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class ErrorTest {
+public class ErrorTest {
 
     Error error;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() throws Exception {
         error = new Error();
     }
 
     @Test
-    void getCode() {
+    public void getCode() {
         Integer code = 404;
         error.setCode(code);
         assertEquals(error.getCode(), code);
     }
 
     @Test
-    void getMessage() {
+    public void getMessage() {
         String message = "Not Found";
         error.setMessage(message);
         assertEquals(error.getMessage(),message);

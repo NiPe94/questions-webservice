@@ -1,7 +1,7 @@
 package io.swagger.model;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.threeten.bp.OffsetDateTime;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ class QuestionTest {
 
     Question question;
 
-    @BeforeEach
+    @Before
     void setUp() {
         question = new Question();
     }

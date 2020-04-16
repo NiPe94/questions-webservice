@@ -1,22 +1,22 @@
 package io.swagger.model;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.threeten.bp.OffsetDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class UserTest {
+public class UserTest {
 
     User user;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() throws Exception {
         user = new User();
     }
 
     @Test
-    void getUserId() {
+    public void getUserId() {
         Long idValue = 1L;
 
         user.setUserId(idValue);
@@ -25,7 +25,7 @@ class UserTest {
     }
 
     @Test
-    void getCreationDate() {
+    public void getCreationDate() {
         OffsetDateTime time = OffsetDateTime.now();
 
         user.setCreationDate(time);
@@ -34,7 +34,7 @@ class UserTest {
     }
 
     @Test
-    void getDisplayName() {
+    public void getDisplayName() {
         String name = "Hannes";
 
         user.setDisplayName(name);
