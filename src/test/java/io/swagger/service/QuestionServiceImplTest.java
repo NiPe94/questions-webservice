@@ -74,12 +74,11 @@ public class QuestionServiceImplTest {
         tags.add("Kotlin");
         tags.add("Java");
 
-        when(repository.findByTagsIn(Arrays.asList(tags.get(0)))).thenReturn(testList.subList(1,2));
-        when(repository.findByTagsIn(Arrays.asList(tags.get(1)))).thenReturn(testList.subList(0,1));
+        when(repository.findByTagsIn(tags)).thenReturn(testList);
 
         List<Question> result = questionService.findByTags(tags);
         assertEquals(result.size(),2);
-        verify(repository,times(2)).findByTagsIn(any());
+        verify(repository,times(1)).findByTagsIn(any());
     }
 
     @Test
