@@ -17,6 +17,7 @@ import java.io.IOException;
 public class UserServiceImpl implements UserService {
     @Override
     public User findById(Long id) {
+
         HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory(
                 HttpClientBuilder.create().build());
         RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory);

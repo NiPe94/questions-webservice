@@ -45,6 +45,7 @@ public class UsersApiController implements UsersApi {
         }
 
         User user = userService.findById(userId);
+        log.info("Stackoverflow User API is called for id: "+userId);
 
         if(user==null){
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
