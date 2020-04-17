@@ -12,7 +12,7 @@ Besides the Spring framework the following tools were used for this project:
 
 ## How to build and run
 * Build it with `mvn clean install`
-* Run the jar file **target/swagger-spring-1.0.0.jar** with `java -jar swagger-spring-1.0.0.jar
+* Run the jar file **target/swagger-spring-1.0.0.jar** with `java -jar swagger-spring-1.0.0.jar`.
 
 ## Additional information
 * When running, one can access the database page with "localhost:8080/h2-console". The information needed is the class with "org.h2.Driver", url is "jdbc:h2:mem:testdb", name is "sa".
