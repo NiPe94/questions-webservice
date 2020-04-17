@@ -41,4 +41,22 @@ public class UserTest {
 
         assertEquals(user.getDisplayName(), name);
     }
+
+    @Test
+    public void equalUsers(){
+        String displayName = "user1";
+        Long id = 1L;
+        OffsetDateTime time = OffsetDateTime.now();
+        user.setDisplayName(displayName);
+        user.setCreationDate(time);
+        user.setUserId(id);
+
+        User other = new User();
+        other.setDisplayName(displayName);
+        other.setUserId(id);
+        other.setCreationDate(time);
+
+        assertTrue(user.equals(other));
+        assertTrue(user.toString().equals(other.toString()));
+    }
 }

@@ -27,4 +27,20 @@ public class ErrorTest {
         error.setMessage(message);
         assertEquals(error.getMessage(),message);
     }
+
+    @Test
+    public void equalErrors(){
+        Integer code = 200;
+        String msg = "OK";
+
+        error.setMessage(msg);
+        error.setCode(code);
+
+        Error other = new Error();
+        other.setCode(code);
+        other.setMessage(msg);
+
+        assertTrue(error.equals(other));
+        assertTrue(error.toString().equals(other.toString()));
+    }
 }

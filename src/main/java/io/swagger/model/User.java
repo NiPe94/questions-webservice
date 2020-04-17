@@ -45,11 +45,6 @@ public class User   {
     this.userId = userId;
   }
 
-  public User creationDate(OffsetDateTime creationDate) {
-    this.creationDate = creationDate;
-    return this;
-  }
-
   /**
    * Get creationDate
    * @return creationDate
@@ -63,11 +58,6 @@ public class User   {
 
   public void setCreationDate(OffsetDateTime creationDate) {
     this.creationDate = creationDate;
-  }
-
-  public User displayName(String displayName) {
-    this.displayName = displayName;
-    return this;
   }
 
   /**

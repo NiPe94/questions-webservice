@@ -68,11 +68,6 @@ public class Question implements Serializable {
     this.id = id;
   }
 
-  public Question tags(List<String> tags) {
-    this.tags = tags;
-    return this;
-  }
-
   public Question addTagsItem(String tagsItem) {
     if (this.tags == null) {
       this.tags = new ArrayList<String>();
@@ -95,11 +90,6 @@ public class Question implements Serializable {
     this.tags = tags;
   }
 
-  public Question isAnswered(Boolean isAnswered) {
-    this.isAnswered = isAnswered;
-    return this;
-  }
-
   /**
    * Get isAnswered
    * @return isAnswered
@@ -112,11 +102,6 @@ public class Question implements Serializable {
 
   public void setIsAnswered(Boolean isAnswered) {
     this.isAnswered = isAnswered;
-  }
-
-  public Question viewCount(Long viewCount) {
-    this.viewCount = viewCount;
-    return this;
   }
 
   /**
@@ -133,10 +118,6 @@ public class Question implements Serializable {
     this.viewCount = viewCount;
   }
 
-  public Question answerCount(Long answerCount) {
-    this.answerCount = answerCount;
-    return this;
-  }
 
   /**
    * Get answerCount
@@ -152,11 +133,6 @@ public class Question implements Serializable {
     this.answerCount = answerCount;
   }
 
-  public Question creationDate(OffsetDateTime creationDate) {
-    this.creationDate = creationDate;
-    return this;
-  }
-
   /**
    * Get creationDate
    * @return creationDate
@@ -170,11 +146,6 @@ public class Question implements Serializable {
 
   public void setCreationDate(OffsetDateTime creationDate) {
     this.creationDate = creationDate;
-  }
-
-  public Question userId(Long userId) {
-    this.userId = userId;
-    return this;
   }
 
   /**

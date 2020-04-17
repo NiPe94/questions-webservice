@@ -67,4 +67,37 @@ public class QuestionTest {
         question.setUserId(id);
         assertEquals(question.getUserId(), id);
     }
+
+    @Test
+    public void equalQuestions(){
+        Long qId = 1L;
+        Long uId = 2L;
+        OffsetDateTime time = OffsetDateTime.now();
+        Long aCount = 10L;
+        Long vCount = 100L;
+        Boolean answered = true;
+        List<String> tags = new ArrayList<>();
+        tags.add("python");
+
+        question.setUserId(uId);
+        question.setCreationDate(time);
+        question.setAnswerCount(aCount);
+        question.setViewCount(vCount);
+        question.setIsAnswered(answered);
+        question.setTags(tags);
+        question.setId(qId);
+
+        Question other = new Question();
+        other.setUserId(uId);
+        other.setCreationDate(time);
+        other.setAnswerCount(aCount);
+        other.setViewCount(vCount);
+        other.setIsAnswered(answered);
+        other.setTags(tags);
+        other.setId(qId);
+
+        assertTrue(question.equals(other));
+        assertTrue(question.toString().equals(other.toString()));
+
+    }
 }
